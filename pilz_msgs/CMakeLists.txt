@@ -6,26 +6,17 @@ find_package(catkin REQUIRED COMPONENTS
   moveit_msgs)
 
 ## Generate messages in the 'msg' folder
- add_message_files(
-   FILES
-   MotionSequenceItem.msg
-   MotionSequenceRequest.msg
-   IsBrakeTestRequiredResult.msg
- )
-
- #Generate services in the 'srv' folder
- add_service_files(
-   FILES
-   BrakeTest.srv
-   GetMotionSequence.srv
-   IsBrakeTestRequired.srv
-   GetSpeedOverride.srv
- )
-
-# Generate actions in the 'action' folder
-add_action_files(
+add_message_files(
   FILES
-  MoveGroupSequence.action
+  IsBrakeTestRequiredResult.msg
+)
+
+#Generate services in the 'srv' folder
+add_service_files(
+  FILES
+  BrakeTest.srv
+  IsBrakeTestRequired.srv
+  GetSpeedOverride.srv
 )
 
 # Generate added messages and services with any dependencies listed here
