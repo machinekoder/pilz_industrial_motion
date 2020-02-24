@@ -48,14 +48,14 @@ public:
   }
 };
 
-pilz_msgs::MotionSequenceRequest Sequence::toRequest() const
+moveit_msgs::MotionSequenceRequest Sequence::toRequest() const
 {
-  pilz_msgs::MotionSequenceRequest req;
+  moveit_msgs::MotionSequenceRequest req;
 
   std::vector<std::string> group_names;
   for (const auto& cmd : cmds_)
   {
-    pilz_msgs::MotionSequenceItem item;
+    moveit_msgs::MotionSequenceItem item;
     item.req = boost::apply_visitor( ToReqVisitor(), cmd.first);
 
     if ( std::find(group_names.begin(), group_names.end(), item.req.group_name) != group_names.end() )

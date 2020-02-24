@@ -17,20 +17,20 @@
 
 from __future__ import absolute_import
 
-import rospy
-from tf import transformations
-from geometry_msgs.msg import Quaternion, Pose
-from geometry_msgs.msg import PoseStamped
-from pilz_msgs.msg import MoveGroupSequenceGoal, MotionSequenceItem
-from moveit_msgs.msg import (OrientationConstraint, MotionPlanRequest, JointConstraint, Constraints,
-                             PositionConstraint, PlanningOptions)
-import shape_msgs.msg as shape_msgs
-from operator import add
+from copy import deepcopy
 from math import pi
+from operator import add
+
+import rospy
+import shape_msgs.msg as shape_msgs
+from geometry_msgs.msg import Pose, PoseStamped, Quaternion
+from moveit_msgs.msg import (Constraints, JointConstraint, MotionPlanRequest,
+                             MotionSequenceItem, MoveGroupSequenceGoal,
+                             OrientationConstraint, PlanningOptions,
+                             PositionConstraint)
+from tf import transformations
 
 from .move_control_request import _MoveControlState
-from copy import deepcopy
-
 
 __version__ = '0.0.dev1'
 

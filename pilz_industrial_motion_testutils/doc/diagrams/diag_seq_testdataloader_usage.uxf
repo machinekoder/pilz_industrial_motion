@@ -151,7 +151,7 @@ transparency=0</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;-
 toRequest() : 
-pilz_msgs::MotionPlanRequest</panel_attributes>
+moveit_msgs::MotionPlanRequest</panel_attributes>
     <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>

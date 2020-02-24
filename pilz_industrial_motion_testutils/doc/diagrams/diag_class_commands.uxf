@@ -92,9 +92,9 @@ Circ</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
+      <x>50</x>
       <y>200</y>
-      <w>380</w>
+      <w>400</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>Sequence
@@ -104,7 +104,7 @@ Circ</panel_attributes>
 + getBlendRadius(index: int)
 + getCmd() : MotionCmd&amp;
 
-+ toRequest() : pilz_msgs::MotionSequenceRequest</panel_attributes>
++ toRequest() : moveit_msgs::MotionSequenceRequest</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

@@ -29,7 +29,8 @@ from std_msgs.msg import Header
 from std_srvs.srv import Trigger
 import tf
 
-from pilz_msgs.msg import MoveGroupSequenceAction, IsBrakeTestRequiredResult
+from moveit_msgs.msg import MoveGroupSequenceAction
+from pilz_msgs.msg import IsBrakeTestRequiredResult
 from pilz_msgs.srv import GetSpeedOverride, IsBrakeTestRequired, BrakeTest, BrakeTestResponse
 
 from .move_control_request import _MoveControlState, MoveControlAction, _MoveControlStateMachine

@@ -22,7 +22,7 @@
 #include <utility>
 #include <typeinfo>
 
-#include <pilz_msgs/MotionSequenceRequest.h>
+#include <moveit_msgs/MotionSequenceRequest.h>
 
 #include "command_types_typedef.h"
 #include "motioncmd.h"
@@ -76,7 +76,7 @@ public:
    */
   void erase(const size_t start, const size_t end);
 
-  pilz_msgs::MotionSequenceRequest toRequest() const;
+  moveit_msgs::MotionSequenceRequest toRequest() const;
 
 private:
   using TCmdRadiiPair = std::pair<CmdVariant, double>;
