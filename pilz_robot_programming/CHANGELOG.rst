@@ -4,7 +4,7 @@ Changelog for package pilz_robot_programming
 
 Forthcoming
 -----------
-* changing references from pilz_command_planner to trapezoidal_command_planner
+* changing references from pilz_command_planner to pilz_industrial_motion_planner
 * Contributors: Pilz GmbH and Co. KG
 
 0.4.10 (2019-12-04)
