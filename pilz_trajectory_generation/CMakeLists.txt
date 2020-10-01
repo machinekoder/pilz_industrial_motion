@@ -6,7 +6,7 @@ add_definitions(-std=c++11)
 add_definitions(-Wall)
 add_definitions(-Wextra)
 add_definitions(-Wno-unused-parameter)
-add_definitions(-Werror)
+#add_definitions(-Werror)
 
 find_package(catkin REQUIRED COMPONENTS
   moveit_core
