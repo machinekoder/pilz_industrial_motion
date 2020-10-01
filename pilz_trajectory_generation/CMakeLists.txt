@@ -207,7 +207,7 @@ install(TARGETS
 #############
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
-  find_package(pilz_testutils REQUIRED)
+  find_package(pilz_test_facility REQUIRED)
 
   include_directories(
     ${pilz_testutils_INCLUDE_DIRS}
