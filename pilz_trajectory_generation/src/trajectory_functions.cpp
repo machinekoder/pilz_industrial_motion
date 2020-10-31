@@ -138,7 +138,7 @@ bool pilz::verifySampleJointLimits(const std::map<std::string, double> &position
   const double epsilon = 10e-6;
   if(duration_current <= epsilon)
   {
-    ROS_ERROR("Sample duration too small, cannot compute the velocity");
+    ROS_WARN("Sample duration too small, cannot compute the velocity");
     return false;
   }
 
@@ -150,7 +150,7 @@ bool pilz::verifySampleJointLimits(const std::map<std::string, double> &position
 
     if(!joint_limits.verifyVelocityLimit(pos.first, velocity_current))
     {
-      ROS_ERROR_STREAM("Joint velocity limit of " << pos.first << " violated. Set the velocity scaling factor lower!"
+      ROS_WARN_STREAM("Joint velocity limit of " << pos.first << " violated. Set the velocity scaling factor lower!"
                        << " Actual joint velocity is " << velocity_current
                        << ", while the limit is " << joint_limits.getLimit(pos.first).max_velocity
                        << ". ");
@@ -164,7 +164,7 @@ bool pilz::verifySampleJointLimits(const std::map<std::string, double> &position
       if(joint_limits.getLimit(pos.first).has_acceleration_limits &&
          fabs(acceleration_current)>fabs(joint_limits.getLimit(pos.first).max_acceleration))
       {
-        ROS_ERROR_STREAM("Joint acceleration limit of " << pos.first
+        ROS_WARN_STREAM("Joint acceleration limit of " << pos.first
                          << " violated. Set the acceleration scaling factor lower!"
                          << " Actual joint acceleration is " << acceleration_current
                          << ", while the limit is " << joint_limits.getLimit(pos.first).max_acceleration
@@ -178,7 +178,7 @@ bool pilz::verifySampleJointLimits(const std::map<std::string, double> &position
       if(joint_limits.getLimit(pos.first).has_deceleration_limits &&
          fabs(acceleration_current)>fabs(joint_limits.getLimit(pos.first).max_deceleration))
       {
-        ROS_ERROR_STREAM("Joint deceleration limit of " << pos.first
+        ROS_WARN_STREAM("Joint deceleration limit of " << pos.first
                          << " violated. Set the acceleration scaling factor lower!"
                          << " Actual joint deceleration is " << acceleration_current
                          << ", while the limit is " << joint_limits.getLimit(pos.first).max_deceleration
@@ -263,7 +263,7 @@ bool pilz::generateJointTrajectory(const moveit::core::RobotModelConstPtr &robot
                                                                    duration_current_sample,
                                                                    joint_limits))
     {
-      ROS_ERROR_STREAM("Inverse kinematics solution at " << *time_iter
+      ROS_WARN_STREAM("Inverse kinematics solution at " << *time_iter
                        << "s violates the joint velocity/acceleration/deceleration limits.");
       error_code.val = moveit_msgs::MoveItErrorCodes::PLANNING_FAILED;
       joint_trajectory.points.clear();

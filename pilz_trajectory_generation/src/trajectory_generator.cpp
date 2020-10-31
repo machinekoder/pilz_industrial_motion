@@ -272,7 +272,7 @@ bool TrajectoryGenerator::generate(const planning_interface::MotionPlanRequest& 
   }
   catch(const MoveItErrorCodeException& ex)
   {
-    ROS_ERROR_STREAM(ex.what());
+    ROS_INFO_STREAM(ex.what());
     res.error_code_.val = ex.getErrorCode();
     setFailureResponse(planning_begin, res);
     return false;
@@ -284,7 +284,7 @@ bool TrajectoryGenerator::generate(const planning_interface::MotionPlanRequest& 
   }
   catch(const MoveItErrorCodeException& ex)
   {
-    ROS_ERROR_STREAM(ex.what());
+    ROS_INFO_STREAM(ex.what());
     res.error_code_.val = ex.getErrorCode();
     setFailureResponse(planning_begin, res);
     return false;
@@ -297,7 +297,7 @@ bool TrajectoryGenerator::generate(const planning_interface::MotionPlanRequest& 
   }
   catch(const MoveItErrorCodeException& ex)
   {
-    ROS_ERROR_STREAM(ex.what());
+    ROS_INFO_STREAM(ex.what());
     res.error_code_.val = ex.getErrorCode();
     setFailureResponse(planning_begin, res);
     return false;
@@ -310,7 +310,7 @@ bool TrajectoryGenerator::generate(const planning_interface::MotionPlanRequest& 
   }
   catch(const MoveItErrorCodeException& ex)
   {
-    ROS_ERROR_STREAM(ex.what());
+    ROS_INFO_STREAM(ex.what());
     res.error_code_.val = ex.getErrorCode();
     setFailureResponse(planning_begin, res);
     return false;
