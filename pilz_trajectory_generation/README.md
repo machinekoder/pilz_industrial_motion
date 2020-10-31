@@ -159,8 +159,6 @@ the Cartesian velocity/acceleration scaling factor if motion plan fails due to v
  - `path_constraints` (position of the interim/center point)
     - `path_constraints/name`: interim or center
     - `path_constraints/position_constraints/constraint_region/primitive_poses/point`: position of the point
- - max_velocity_scaling_factor: rescale the maximal velocity
- - max_acceleration_scaling_factor: rescale the maximal acceleration
 
 ### planning results in `moveit_msg::MotionPlanResponse`
  - `trajectory_start`: bypass the `start_state` in `moveit_msgs::MotionPlanRequest`
