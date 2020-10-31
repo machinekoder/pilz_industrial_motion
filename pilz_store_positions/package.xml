@@ -11,7 +11,7 @@
   <license>LGPLv3</license>
 
   <url type="bugtracker">https://github.com/PilzDE/pilz_industrial_motion/issues</url>
-  <url type="repository">https://github.com/PilzDE/pilz_industrial_motion</url>  
+  <url type="repository">https://github.com/PilzDE/pilz_industrial_motion</url>
 
   <buildtool_depend>catkin</buildtool_depend>
 
@@ -24,10 +24,10 @@
   <exec_depend>tf2_ros</exec_depend>
   <exec_depend>yaml</exec_depend>
 
-  <test_depend>python-mock</test_depend>
+  <test_depend>python3-mock</test_depend>
   <test_depend>rostest</test_depend>
   <test_depend>ros_pytest</test_depend>
   <test_depend>visualization_msgs</test_depend>
   <test_depend>code_coverage</test_depend>
-  <test_depend>python-pytest-cov</test_depend>
+  <test_depend>python3-pytest-cov</test_depend>
 </package>
